@@ -1,0 +1,77 @@
+.select{
+    cursor:pointer;
+    border-radius: 2px;
+    height:30px;
+}
+
+.producerSelect{
+    composes:select;
+    width:100%;
+    
+}
+
+.configEditor{
+    /* border:1px solid black; */
+    border-radius:5px;
+    width:95%;
+    margin:20px auto 0 auto;
+    padding:5px;
+    /* max-height:80%;
+    height:430px; */
+    overflow-y:auto;
+    flex:1
+}
+
+.editorHead{
+    text-align: right;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 97%;
+}
+
+textarea{
+    width:98%;
+    min-height: 70px;
+    resize: vertical;
+}
+
+input{
+    max-width: 100%;
+}
+
+::placeholder {
+    color: #686de0;
+
+}
+
+input:-ms-input-placeholder{
+    color: #686de0;
+}
+
+
+.shine{
+    overflow: hidden;
+    position: relative;
+}
+
+.shine::before{
+    content: "";
+    position: absolute;
+    height: 130%;
+    width:40%;
+    display: inline-block;
+    -ms-transform: skewX(-9deg) translateX(-7px);
+    transform: skewX(-9deg) translateX(-7px);
+    background-color: rgba(255, 255, 255, 0.8);
+    /* ie 無法接受 #ffffff80的形式 */
+    animation-name: shine;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-duration: 0.5s;
+}
+
+@keyframes shine{
+    0%{transform: skewX(-9deg) translateX(-7px);}
+    100%{transform: skewX(-9deg) translateX(20px);}
+}
